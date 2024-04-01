@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Dist/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            screens:{
+                'xsm' : '375px',
+            }
+          },
+          
+        },
+      };
+    </script>
+  </head>
+  <body>
+
+    <header class="container bg-red-900 mx-auto xsm:w-[50%] sm:w-[80%]">
+        <div class="logoSearch">
+            	<img src="./Dist/images/logo.png" alt="">
+                <input type="text" placeholder="hello">
+                
+        </div>
+        <div class="location">
+            <button>Sign In</button>
+        </div>
+    </header>
+
+    <script src="./Dist/js/main.js"></script>
+  </body>
+</html>
