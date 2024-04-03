@@ -4,27 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        .logoSearch{
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .searchBox{
-            border: 1px solid #000;
-        }
-    </style>
+    <link rel="stylesheet" href="./Dist/css/style.css" />
   </head>
   <body>
-      <div class="logoSearch">
-        <img src="./Dist/images/logo.png" alt="" />
-        <div class="searchBox">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="hello" />
+    <!-- first Row starts -->
+
+    <div class="boxWidth">
+      <div class="header1stRow">
+        <div class="logoSearch">
+          <img src="./Dist/images/logo.png" alt="" />
+          <div class="searchBox">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="Search for Movies, Events, Plays, Sports and Activities"
+            />
+          </div>
+        </div>
+        <div class="location">
+          <button class="btnLocation">
+            Delhi-NCR<i class="fa-solid fa-angle-down"></i>
+          </button>
+          <button class="signIn">Sign In</button>
+          <div class="menuBar">
+            <i class="fa-solid fa-bars"></i>
+          </div>
         </div>
       </div>
-      <div class="location">
-        <button>Sign In</button>
+    </div>
+
+    <!-- first Row ends -->
+
+    <!-- Second Row starts -->
+
+    <div class="header2ndRow">
+      <div class="boxWidth">
+        <ul>
+          <li><a href="#">Movies</a></li>
+          <li><a href="#">Stream</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Plays</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Activities</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">ListYourShow</a></li>
+          <li><a href="#">Corporates</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
       </div>
+    </div>
+
+    <!-- Second Row ends -->
+
+    <script
+      src="https://kit.fontawesome.com/9ba24a9f81.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
