@@ -12,9 +12,13 @@
   --offwhite1: #ebebeb;
 }
 .boxWidth {
-  max-width: 1330px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 40px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* header starts */
@@ -110,6 +114,126 @@
 
 /* banner starts */
 
-
+.banner {
+  background-color: var(--offwhite1);
+  padding: 10px 0;
+}
+.banner .boxWidth {
+  position: relative;
+}
+.bannerCarousel {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.bannerCarousel img {
+  border-radius: 10px;
+  width: 100%;
+}
+.bannerBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #000000c0;
+  border: none;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+}
+.bannerBtnLeft {
+  left: 50px;
+}
+.bannerBtnRight {
+  right: 50px;
+}
 
 /* banner ends */
+
+/* recommSection starts */
+
+.recommSection {
+  padding: 30px 0;
+}
+.recommSection .boxWidth{
+  position: relative;
+}
+.recommTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommTitle p {
+  font-size: 14px;
+}
+.recommTitle a {
+  text-decoration: none;
+  color: var(--red);
+}
+.recommTitle i {
+  font-size: 10px;
+}
+.recommMoviesCont {
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 5) - 24px);
+  gap: 30px;
+  margin-top: 15px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.recommMovies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recommMovies img {
+  display: flex;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.rating {
+  padding: 8px 10px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  gap: 15px;
+  font-weight: 400;
+  border-radius: 0 0 8px 8px;
+  /* align-items: center; */
+}
+.rating i {
+  color: var(--red);
+}
+.movieTitle {
+  margin-top: 5px;
+  font-weight: 600;
+}
+.movieDes {
+  color: #666;
+}
+.sliderBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  border: none;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+}
+.sliderBtnLeft {
+  left: 20px;
+}
+.sliderBtnRight {
+  right: 20px;
+}
+/* recommSection ends */
