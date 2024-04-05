@@ -43,12 +43,23 @@ fetch(
     });
 
     const movieContWidth = recommMoviesCont.clientWidth;
-    const movieContTotalWidth = recommMoviesCont.scrollWidth;
     const sliderBtn = document.querySelectorAll(".sliderBtn");
     sliderBtn.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            recommMoviesCont.scrollLeft += btn.id === "left" ? -movieContWidth - 30 : movieContWidth + 30;
-        })
-    })
-
+      btn.addEventListener("click", () => {
+        recommMoviesCont.scrollLeft +=
+          btn.id === "left" ? -movieContWidth - 30 : movieContWidth + 30;
+      });
+    });
   });
+
+//Event section
+
+const eventMoviesList = document.querySelector(".eventMoviesList");
+const movieContWidth1 = eventMoviesList.clientWidth;
+const sliderBtn1 = document.querySelectorAll(".sliderBtn1");
+sliderBtn1.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    eventMoviesList.scrollLeft +=
+      btn.id === "left" ? -movieContWidth1 - 30 : movieContWidth1 + 30;
+  });
+});

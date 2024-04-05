@@ -159,7 +159,7 @@ h2 {
 .recommSection {
   padding: 30px 0;
 }
-.recommSection .boxWidth{
+.recommSection .boxWidth {
   position: relative;
 }
 .recommTitle {
@@ -177,7 +177,8 @@ h2 {
 .recommTitle i {
   font-size: 10px;
 }
-.recommMoviesCont {
+.recommMoviesCont,
+.recommMoviesCont1 .eventMoviesList {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 5) - 24px);
@@ -185,6 +186,13 @@ h2 {
   margin-top: 15px;
   overflow: hidden;
   scroll-behavior: smooth;
+}
+.recommMoviesCont1{
+  position: relative;
+}
+.recommMoviesCont1 img {
+  width: 100%;
+  border-radius: 8px;
 }
 .recommMovies {
   display: flex;
@@ -215,7 +223,8 @@ h2 {
 .movieDes {
   color: #666;
 }
-.sliderBtn {
+.sliderBtn,
+.sliderBtn1 {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -231,11 +240,17 @@ h2 {
 .sliderBtnLeft {
   left: 20px;
 }
+.sliderBtnLeft1{
+  left: -20px;
+}
 .sliderBtnRight {
   right: 20px;
 }
-.advertise img{
+.sliderBtnRight1 {
+  right: -20px;
+}
+.advertise img {
   width: 100%;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 /* recommSection ends */
