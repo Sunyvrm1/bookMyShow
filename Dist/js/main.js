@@ -66,10 +66,16 @@ const targetBoxes = [
 // Loop through APIs to fetch and display images
 
 apiEndpoints.forEach((endpoint, index) => {
-  fetchandDisplay(endpoint, targetBoxes[index]);
+  // fetchandDisplay(endpoint, targetBoxes[index]);
+  if (index % 2 === 0) {
+    // Reverse the data for duplicate APIs
+    fetchandDisplay(endpoint, targetBoxes[index], true);
+  } else {
+    fetchandDisplay(endpoint, targetBoxes[index]);
+  }
 });
 
-function fetchandDisplay(apiEndpoint, targetBox) {
+function fetchandDisplay(apiEndpoint, targetBox, reverseData = false) {
   fetch(apiEndpoint)
     .then((res) => res.json())
     .then((data) => {
