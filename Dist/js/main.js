@@ -34,16 +34,16 @@ sliders.forEach((slider, i) => {
   switchLeft.addEventListener("click", () => {
     const scrollAmount = slider.clientWidth;
     slider.scrollTo({
-      left: slider.scrollLeft - scrollAmount - 30
+      left: slider.scrollLeft - scrollAmount - 30,
     });
   });
   switchRight.addEventListener("click", () => {
     const scrollAmount = slider.clientWidth;
     slider.scrollTo({
-      left: slider.scrollLeft + scrollAmount + 30
+      left: slider.scrollLeft + scrollAmount + 30,
     });
   });
-})
+});
 
 //API Code
 
@@ -52,11 +52,16 @@ sliders.forEach((slider, i) => {
 const apiEndpoints = [
   "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62",
   "https://api.themoviedb.org/3/trending/movie/day?api_key=d7667b78097516f5e82e6955576dcf62",
-  "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62"
+  "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62",
+  "https://api.themoviedb.org/3/trending/movie/day?api_key=d7667b78097516f5e82e6955576dcf62",
 ];
 
-
-const targetBoxes = [".recommMoviesCont1", ".recommMoviesCont2", ".recommMoviesCont3"];
+const targetBoxes = [
+  ".recommMoviesCont1",
+  ".recommMoviesCont2",
+  ".recommMoviesCont3",
+  ".recommMoviesCont4"
+];
 
 // Loop through APIs to fetch and display images
 
@@ -66,7 +71,7 @@ apiEndpoints.forEach((endpoint, index) => {
 
 function fetchandDisplay(apiEndpoint, targetBox) {
   fetch(apiEndpoint)
-    .then((response) => response.json())
+    .then((res) => res.json())
     .then((data) => {
       data.results.map((item) => {
         const box = document.querySelector(targetBox);
