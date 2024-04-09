@@ -12,46 +12,6 @@ bannerBtn.forEach((btn) => {
   });
 });
 
-//Recommended Movies
-
-fetch(
-  "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62"
-)
-  .then((res) => res.json())
-  .then((data) => {
-    const recommMoviesCont = document.querySelector(".recommMoviesCont");
-    data.results.map((movie) => {
-      recommMoviesCont.insertAdjacentHTML(
-        "beforeend",
-        `
-        <div class="recommMovies">
-            <div>
-            <img src="https://image.tmdb.org/t/p/w500/${
-              movie.poster_path
-            }" alt="">
-            <div class="rating">
-              <i class="fa-solid fa-star"></i>
-              <p>${movie.vote_average.toFixed(1)}/10</p>
-              <p>${movie.vote_count} Votes</p>
-            </div>
-          </div>
-            <p class="movieTitle">${movie.title}</p>
-            <p class="movieDes">Comedy/Thriller</p>
-          </div>
-        `
-      );
-    });
-
-    const movieContWidth = recommMoviesCont.clientWidth;
-    const sliderBtn = document.querySelectorAll(".sliderBtn");
-    sliderBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        recommMoviesCont.scrollLeft +=
-          btn.id === "left" ? -movieContWidth - 30 : movieContWidth + 30;
-      });
-    });
-  });
-
 //Event section
 
 const eventMoviesList = document.querySelector(".eventMoviesList");
@@ -63,3 +23,70 @@ sliderBtn1.forEach((btn) => {
       btn.id === "left" ? -movieContWidth1 - 30 : movieContWidth1 + 30;
   });
 });
+
+//API Slider
+
+const sliders = document.querySelectorAll(".recommMoviesCont");
+
+sliders.forEach((slider, i) => {
+  const switchLeft = slider.parentElement.querySelector(".sliderBtnLeft");
+  const switchRight = slider.parentElement.querySelector(".sliderBtnRight");
+  switchLeft.addEventListener("click", () => {
+    const scrollAmount = slider.clientWidth;
+    slider.scrollTo({
+      left: slider.scrollLeft - scrollAmount - 30
+    });
+  });
+  switchRight.addEventListener("click", () => {
+    const scrollAmount = slider.clientWidth;
+    slider.scrollTo({
+      left: slider.scrollLeft + scrollAmount + 30
+    });
+  });
+})
+
+//API Code
+
+// Define API endpoints and target boxes
+
+const apiEndpoints = [
+  "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62",
+  "https://api.themoviedb.org/3/trending/movie/day?api_key=d7667b78097516f5e82e6955576dcf62",
+  "https://api.themoviedb.org/3/discover/movie?api_key=d7667b78097516f5e82e6955576dcf62"
+];
+
+
+const targetBoxes = [".recommMoviesCont1", ".recommMoviesCont2", ".recommMoviesCont3"];
+
+// Loop through APIs to fetch and display images
+
+apiEndpoints.forEach((endpoint, index) => {
+  fetchandDisplay(endpoint, targetBoxes[index]);
+});
+
+function fetchandDisplay(apiEndpoint, targetBox) {
+  fetch(apiEndpoint)
+    .then((response) => response.json())
+    .then((data) => {
+      data.results.map((item) => {
+        const box = document.querySelector(targetBox);
+        const html = `
+        <div class="recommMovies">
+            <div>
+            <img src="https://image.tmdb.org/t/p/w500/${
+              item.poster_path
+            }" alt="${item.id}" data-author="${apiEndpoint}" />
+            <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <p>${item.vote_average.toFixed(1)}/10</p>
+              <p>${item.vote_count} Votes</p>
+            </div>
+          </div>
+            <p class="movieTitle">${item.title}</p>
+            <p class="movieDes">Comedy/Thriller</p>
+            
+          </div>`;
+        box.insertAdjacentHTML("beforeend", html);
+      });
+    });
+}
