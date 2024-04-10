@@ -60,22 +60,18 @@ const targetBoxes = [
   ".recommMoviesCont1",
   ".recommMoviesCont2",
   ".recommMoviesCont3",
-  ".recommMoviesCont4"
+  ".recommMoviesCont4",
 ];
 
 // Loop through APIs to fetch and display images
 
 apiEndpoints.forEach((endpoint, index) => {
-  // fetchandDisplay(endpoint, targetBoxes[index]);
-  if (index % 2 === 0) {
-    // Reverse the data for duplicate APIs
-    fetchandDisplay(endpoint, targetBoxes[index], true);
-  } else {
-    fetchandDisplay(endpoint, targetBoxes[index]);
-  }
+  const insertPosition =
+    index === 2 || index === 3 ? "afterbegin" : "beforeend";
+  fetchandDisplay(endpoint, targetBoxes[index], insertPosition);
 });
 
-function fetchandDisplay(apiEndpoint, targetBox, reverseData = false) {
+function fetchandDisplay(apiEndpoint, targetBox, insertPosition = "beforeend") {
   fetch(apiEndpoint)
     .then((res) => res.json())
     .then((data) => {
@@ -97,7 +93,7 @@ function fetchandDisplay(apiEndpoint, targetBox, reverseData = false) {
             <p class="movieDes">Comedy/Thriller</p>
             
           </div>`;
-        box.insertAdjacentHTML("beforeend", html);
+        box.insertAdjacentHTML(insertPosition, html);
       });
     });
 }
