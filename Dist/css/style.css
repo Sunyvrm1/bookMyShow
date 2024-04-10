@@ -225,16 +225,12 @@ h2 {
 .movieDes {
   color: #666;
 }
-.sliderBtn,
-.sliderBtn1 {
-  /* position: absolute; */
+.sliderBtn {
   width: 40px;
   height: 40px;
   background-color: #999;
   border: none;
   border-radius: 50%;
-  top: 50%;
-  /* transform: translateY(-50%); */
   color: var(--white);
   font-size: 20px;
   cursor: pointer;
@@ -242,15 +238,34 @@ h2 {
 .sliderBtnLeft {
   left: 20px;
 }
-.sliderBtnLeft1{
-  left: -20px;
-}
 .sliderBtnRight {
   right: 20px;
+}
+
+/* Event slider */
+
+.sliderBtn1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #999;
+  border: none;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+}
+.sliderBtnLeft1{
+  left: -20px;
 }
 .sliderBtnRight1 {
   right: -20px;
 }
+
+/* Event slider */
+
 .advertise img {
   width: 100%;
   margin: 30px 0;
