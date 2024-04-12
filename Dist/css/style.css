@@ -400,17 +400,89 @@ footer {
 
 /* bannerMovies starts */
 .bannerMovies {
-  background-image: linear-gradient(90deg, #000, #000, rgba(0, 0, 0, 0.5), #000, #000), url(https://image.tmdb.org/t/p/w500/qekky2LbtT1wtbD5MDgQvjfZQ24.jpg);
+  /* background-image: linear-gradient(
+      90deg,
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 0.4),
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 1)
+    ),
+    url(https://image.tmdb.org/t/p/w500/qekky2LbtT1wtbD5MDgQvjfZQ24.jpg); */
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 65% 50%;
 }
 .bannerMovieImage {
-  padding: 30px;
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+  padding: 30px 40px;
+  display: flex;
+  gap: 30px;
+  color: var(--white);
+  align-items: center;
 }
-
+.bannerMovieImage img {
+  display: flex;
+  border-radius: 5px;
+}
+.bannerMovies h2{
+  font-size: 35px;
+  color: var(--white);
+}
+.bannerRatingCont{
+  padding: 20px;
+  background-color: var(--Dark);
+  color: var(--white);
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 260px;
+}
+.bannerRatingCont i{
+  color: var(--red);
+}
+.bannerRateCont{
+  font-weight: 700;
+}
+.bannerBtnCont{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.bannerBtnCont button{
+  padding: 3px 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+}
+.lastPara{
+  margin-top: 20px;
+}
+.ticketBook{
+  background-color: var(--red);
+  border: none;
+  padding: 15px;
+  width: 250px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.aboutUS{
+  padding: 30px 40px;
+}
+h3{
+  font-size: 25px;
+}
+#aboutText{
+  margin-top: 20px;
+  line-height: 1.6em;
+}
+.bannerMovieImage img{
+  width: 280px;
+}
 /* bannerMovies ends */

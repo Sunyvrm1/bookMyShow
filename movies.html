@@ -8,21 +8,57 @@
     <link rel="stylesheet" href="./Dist/css/style.css" />
   </head>
   <body>
-
     <header></header>
 
     <!-- banner starts -->
 
-    <div class="bannerMovies">
-        <div class="bannerMovieImage boxWidth">
-
+    <div class="bannerMovies" style="background-image: linear-gradient(
+        90deg,
+        rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 0.4),
+        rgba(26, 26, 26, 1),
+        rgba(26, 26, 26, 1)
+      ),
+      url();">
+      <div class="bannerMovieImage boxWidth">
+        <img
+          src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/bade-miyan-chote-miyan-et00322647-1706081707.jpg"
+          alt=""
+          id="bannerPoster"
+        />
+        <div>
+          <h2 id="bannerTitle">Beekeeper</h2>
+          <div class="bannerRatingCont">
+            <i class="fa-solid fa-star"></i>
+            <p class="bannerRateCont"><span id="bannerRating">6.6</span>/10</p>
+            <p>(<span id="bannerVote">6.6</span> Votes)</p>
+          </div>
+          <div class="bannerBtnCont">
+            <button>2D, IMAX 3D, 3D, IMAX 2D</button>
+            <button>Hindi,Kannada,Malayalam,Telugu,Tamil</button>
+          </div>
+          <p class="lastPara">2h 43m • Action, Comedy, Thriller • UA</p>
+          <button class="ticketBook">Book Ticket</button>
         </div>
+      </div>
     </div>
 
     <!-- banner ends -->
 
+    <!-- About starts -->
+
+    <div class="aboutUS boxWidth">
+        <h3>About the movie</h3>
+        <p id="aboutText">When a masked enemy rises within the nation, mercilessly targeting the military by stealing the country`s most dangerous weapon, Colonel Azad sends his best officer to unearth two legendary from his unit for the mission: Brooding Bade Miyan and cocky Chote Miyan.</p>
+    </div>
+
+    <!-- About ends -->
+
     <footer></footer>
 
+    <script src="./Dist/js/movies.js"></script>
     <script src="./Dist/js/header.js"></script>
     <script src="./Dist/js/footer.js"></script>
     <script
