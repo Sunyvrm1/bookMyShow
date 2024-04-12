@@ -192,6 +192,9 @@ h2 {
   overflow: hidden;
   scroll-behavior: smooth;
 }
+.recommMoviesCont img{
+  cursor: pointer;
+}
 .recommMoviesContEvent {
   position: relative;
   margin-bottom: 30px;

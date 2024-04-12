@@ -95,5 +95,20 @@ function fetchandDisplay(apiEndpoint, targetBox, insertPosition = "beforeend") {
           </div>`;
         box.insertAdjacentHTML(insertPosition, html);
       });
+
+      const images = document.querySelectorAll(`${targetBox} img`);
+      images.forEach((img) => {
+        img.addEventListener("click", clickHandler);
+      });
     });
+}
+
+function clickHandler(event){
+  const clickImageId = event.target.getAttribute("alt");
+  const clickImageAPI = event.target.getAttribute("data-author");
+  // console.log("Clicked ID:", clickImageId);
+  // console.log("Clicked API:", clickImageAPI);
+  localStorage.setItem("clickImageId", clickImageId);
+  localStorage.setItem("clickImageAPI", clickImageAPI);
+  window.location.href = "movies.html";
 }
