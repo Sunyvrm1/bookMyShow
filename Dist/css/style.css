@@ -192,7 +192,7 @@ h2 {
   overflow: hidden;
   scroll-behavior: smooth;
 }
-.recommMoviesCont img{
+.recommMoviesCont img {
   cursor: pointer;
 }
 .recommMoviesContEvent {
@@ -380,7 +380,7 @@ footer {
 .footerText {
   padding: 40px 0;
 }
-.footerText .boxWidth{
+.footerText .boxWidth {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -393,6 +393,24 @@ footer {
   color: var(--offwhite3);
   font-size: 12px;
   line-height: 1.5;
-
 }
 /* footer ends */
+
+/* ---------------- 2nd page css ---------------- */
+
+/* bannerMovies starts */
+.bannerMovies {
+  background-image: linear-gradient(90deg, #000, #000, rgba(0, 0, 0, 0.5), #000, #000), url(https://image.tmdb.org/t/p/w500/qekky2LbtT1wtbD5MDgQvjfZQ24.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bannerMovieImage {
+  padding: 30px;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+/* bannerMovies ends */
