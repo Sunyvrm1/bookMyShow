@@ -43,6 +43,15 @@ displayMovies(storedImageId, storedImageAPI);
 const ticketBook = document.querySelectorAll(".ticketBook");
 ticketBook.forEach((ticket) => {
   ticket.addEventListener("click", () => {
-    console.log("Hello");
+    const overlay = document.querySelector(".overlay");
+    overlay.classList.remove("opacityHalf");
+    document.querySelector("body").style.overflowY = "hidden";
   })
+})
+
+const closeIcon = document.querySelector(".closeIcon");
+closeIcon.addEventListener("click", () => {
+  const overlay = document.querySelector(".overlay");
+  overlay.classList.add("opacityHalf");
+  document.querySelector("body").style.overflowY = "scroll";
 })

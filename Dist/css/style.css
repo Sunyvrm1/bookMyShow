@@ -538,4 +538,15 @@ h3 {
   border-radius: 20px;
   border: 1px solid var(--offwhite);
 }
+.opacityHalf{
+  opacity: 0;
+  z-index: -20;
+}
+.opacityFull{
+  opacity: 1;
+  z-index: 99;
+}
+.closeIcon{
+  cursor: pointer;
+}
 /* ticket format ends */
