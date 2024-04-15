@@ -38,3 +38,11 @@ function displayMovies(storedID, storedAPI) {
 }
 
 displayMovies(storedImageId, storedImageAPI);
+
+
+const ticketBook = document.querySelectorAll(".ticketBook");
+ticketBook.forEach((ticket) => {
+  ticket.addEventListener("click", () => {
+    console.log("Hello");
+  })
+})
