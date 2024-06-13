@@ -572,20 +572,21 @@ h3 {
   padding: 2px 5px;
   border-radius: 10px;
 }
-.bookSecRow{
+/* .bookSecRow{
   padding: 10px 0;
-}
+} */
 .bookDateCont{
   display: flex;
   gap: 6px;
 }
 .bookDate{
-  padding: 3px 9px;
+  padding: 3px 12px;
   background-color: var(--white);
   color: var(--Dark);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  align-self: center;
 }
 .bookDate p{
   font-size: 10px;
@@ -604,4 +605,11 @@ h3 {
 }
 .bookDateClicked{
   color: var(--white) !important;
+}
+.bookSecRow .boxWidth{
+  display: flex;
+  justify-content: space-between;
+}
+.bookDateLNF select{
+  padding: 25px 10px;
 }
