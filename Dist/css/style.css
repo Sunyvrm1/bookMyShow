@@ -551,3 +551,57 @@ h3 {
   cursor: pointer;
 }
 /* ticket format ends */
+
+/* ---------------- Booking page css ---------------- */
+
+.booking .bookFirstRow{
+  padding: 35px 0px 20px 0;
+  border-bottom: 1px solid var(--offwhite);
+}
+.bookMovieName{
+  font-size: 36px;
+}
+.bookFirstRow ul{
+  margin-top: 5px;
+  gap: 8px;
+}
+.bookFirstRow ul li{
+  font-size: 11px;
+  color: var(--lightDark);
+  border: 1px solid var(--lightDark);
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+.bookSecRow{
+  padding: 10px 0;
+}
+.bookDateCont{
+  display: flex;
+  gap: 6px;
+}
+.bookDate{
+  padding: 3px 9px;
+  background-color: var(--white);
+  color: var(--Dark);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bookDate p{
+  font-size: 10px;
+}
+.bookDate:hover{
+  background-color: var(--red);
+  color: var(--white);
+}
+.bookDate .dateBooking{
+  font-size: 14px;
+  font-weight: 500;
+}
+.bookDateActive{
+  background-color: var(--red);
+  color: var(--white);
+}
+.bookDateClicked{
+  color: var(--white) !important;
+}

@@ -64,5 +64,6 @@ const LangButton = document.querySelectorAll(".LangButton");
 LangButton.forEach((btn) => {
   btn.addEventListener("click", () => {
     console.log("Hello by SV");
+    window.location.href = "booking.html";
   });
 });
