@@ -13,6 +13,7 @@
   --offwhite1: #ebebeb;
   --offwhite2: #f5f5f5;
   --offwhite3: #7f7f7f;
+  --offwhite4: #e5e5e5;
   --lightDark: #404043;
   --lightDarkOpac: #4040439d;
   --Dark: #333338;
@@ -97,6 +98,7 @@ h4 {
   background-color: var(--offwhite2);
   padding: 12px 0;
   width: 100%;
+  border-bottom: 1px solid var(--offwhite4);
 }
 .header2ndRow .boxWidth {
   display: flex;
@@ -612,4 +614,6 @@ h3 {
 }
 .bookDateLNF select{
   padding: 25px 10px;
+  border-top: 0;
+  border-left: 1px solid var;
 }
