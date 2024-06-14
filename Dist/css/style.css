@@ -615,5 +615,21 @@ h3 {
 .bookDateLNF select{
   padding: 25px 10px;
   border-top: 0;
-  border-left: 1px solid var;
+  border-left: 1px solid var(--offwhite4);
+  border-right: 1px solid var(--offwhite4);
+  border-bottom: 3px solid var(--red);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Dark);
+}
+.bookDateLNF select:focus-visible{
+  outline: none;
+}
+.bookPlace{
+  background-color: var(--offwhite2);
+  padding: 15px;
+}
+.bookCinemaCont{
+  background-color: var(--white);
+  padding: 20px;
 }
