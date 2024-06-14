@@ -7,6 +7,7 @@
 }
 :root {
   --red: #f84464;
+  --green: #4abd5d;
   --blue: #2b3148;
   --white: #fff;
   --offwhite: #a5a5a5;
@@ -14,6 +15,8 @@
   --offwhite2: #f5f5f5;
   --offwhite3: #7f7f7f;
   --offwhite4: #e5e5e5;
+  --offwhite5: #999999;
+  --offwhite6: #e7e7e7;
   --lightDark: #404043;
   --lightDarkOpac: #4040439d;
   --Dark: #333338;
@@ -541,33 +544,33 @@ h3 {
   border: 1px solid var(--offwhite);
   cursor: pointer;
 }
-.opacityHalf{
+.opacityHalf {
   opacity: 0;
   z-index: -20;
 }
-.opacityFull{
+.opacityFull {
   opacity: 1;
   z-index: 99;
 }
-.closeIcon{
+.closeIcon {
   cursor: pointer;
 }
 /* ticket format ends */
 
 /* ---------------- Booking page css ---------------- */
 
-.booking .bookFirstRow{
+.booking .bookFirstRow {
   padding: 35px 0px 20px 0;
   border-bottom: 1px solid var(--offwhite);
 }
-.bookMovieName{
+.bookMovieName {
   font-size: 36px;
 }
-.bookFirstRow ul{
+.bookFirstRow ul {
   margin-top: 5px;
   gap: 8px;
 }
-.bookFirstRow ul li{
+.bookFirstRow ul li {
   font-size: 11px;
   color: var(--lightDark);
   border: 1px solid var(--lightDark);
@@ -577,11 +580,11 @@ h3 {
 /* .bookSecRow{
   padding: 10px 0;
 } */
-.bookDateCont{
+.bookDateCont {
   display: flex;
   gap: 6px;
 }
-.bookDate{
+.bookDate {
   padding: 3px 12px;
   background-color: var(--white);
   color: var(--Dark);
@@ -590,29 +593,29 @@ h3 {
   cursor: pointer;
   align-self: center;
 }
-.bookDate p{
+.bookDate p {
   font-size: 10px;
 }
-.bookDate:hover{
+.bookDate:hover {
   background-color: var(--red);
   color: var(--white);
 }
-.bookDate .dateBooking{
+.bookDate .dateBooking {
   font-size: 14px;
   font-weight: 500;
 }
-.bookDateActive{
+.bookDateActive {
   background-color: var(--red);
   color: var(--white);
 }
-.bookDateClicked{
+.bookDateClicked {
   color: var(--white) !important;
 }
-.bookSecRow .boxWidth{
+.bookSecRow .boxWidth {
   display: flex;
   justify-content: space-between;
 }
-.bookDateLNF select{
+.bookDateLNF select {
   padding: 25px 10px;
   border-top: 0;
   border-left: 1px solid var(--offwhite4);
@@ -622,14 +625,44 @@ h3 {
   font-weight: 500;
   color: var(--Dark);
 }
-.bookDateLNF select:focus-visible{
+.bookDateLNF select:focus-visible {
   outline: none;
 }
-.bookPlace{
+.bookPlace {
   background-color: var(--offwhite2);
-  padding: 15px;
+  padding: 15px 0;
 }
-.bookCinemaCont{
+.bookCinemaCont {
   background-color: var(--white);
-  padding: 20px;
+  padding: 20px 25px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border-bottom: 1px solid var(--offwhite6);
+}
+.bookCinemaName p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.bookCinemaName img {
+  margin-top: 15px;
+  width: 70%;
+}
+.bookCinemaTime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bookCinemaTime ul {
+  gap: 15px;
+}
+.bookCinemaTime ul li {
+  border: 1px solid var(--offwhite5);
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--green);
+  border-radius: 5px;
 }
