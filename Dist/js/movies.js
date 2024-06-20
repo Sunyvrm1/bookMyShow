@@ -62,8 +62,11 @@ closeIcon.addEventListener("click", () => {
 
 const LangButton = document.querySelectorAll(".LangButton");
 LangButton.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    console.log("Hello by SV");
-    window.location.href = "booking.html";
+  btn.addEventListener("click", (e) => {
+    const movieDimension = e.target.id;
+    const movieName = document.querySelector(".movieName").innerHTML;
+    console.log(movieDimension);
+    console.log(movieName);
+    // window.location.href = "booking.html";
   });
 });
