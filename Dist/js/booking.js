@@ -1,11 +1,17 @@
 const bookDateCont = document.querySelector(".bookDateCont");
+const storeDimension = localStorage.getItem("movieDimension");
+const storeTitle = localStorage.getItem("movieTitle");
+console.log(storeDimension, storeTitle);
+
+const bookMovieName = document.querySelector(".bookMovieName");
+bookMovieName.innerHTML = storeTitle;
 
 //date show
 
 fetch("date.json")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     data.forEach((item) => {
       const html = `
       <button class="bookDate">

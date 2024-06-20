@@ -64,9 +64,11 @@ const LangButton = document.querySelectorAll(".LangButton");
 LangButton.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const movieDimension = e.target.id;
-    const movieName = document.querySelector(".movieName").innerHTML;
+    const movieTitle = document.querySelector(".movieName").innerHTML;
     console.log(movieDimension);
-    console.log(movieName);
-    // window.location.href = "booking.html";
+    console.log(movieTitle);
+    localStorage.setItem("movieDimension", movieDimension);
+    localStorage.setItem("movieTitle", movieTitle);
+    window.location.href = "booking.html";
   });
 });
