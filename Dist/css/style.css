@@ -615,7 +615,7 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-/* .bookDateLNF select {
+.inputDim{
   padding: 25px 10px;
   border-top: 0;
   border-left: 1px solid var(--offwhite4);
@@ -624,16 +624,12 @@ h3 {
   font-size: 14px;
   font-weight: 500;
   color: var(--Dark);
-} */
+  cursor: pointer;
+}
 #input1{
-  padding: 25px 10px;
-  border-top: 0;
-  border-left: 1px solid var(--offwhite4);
-  border-right: 1px solid var(--offwhite4);
-  border-bottom: 3px solid var(--red);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--Dark);
+  border: none;
+  cursor: pointer;
+  background-color: var(--white);
 }
 .list{
   position: relative;

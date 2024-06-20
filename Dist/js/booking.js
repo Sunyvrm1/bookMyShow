@@ -69,10 +69,11 @@ fetch("places.json")
   });
 
 const input1 = document.getElementById("input1");
+const inputDim = document.querySelector(".inputDim");
 input1.value = storeDimension;
 const list = document.querySelector(".list ul");
 const listAll = document.querySelectorAll(".list ul li");
-input1.addEventListener("click", () => {
+inputDim.addEventListener("click", () => {
   list.classList.toggle("hide");
 });
 
