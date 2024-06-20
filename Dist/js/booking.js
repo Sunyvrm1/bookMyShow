@@ -67,3 +67,18 @@ fetch("places.json")
       });
     });
   });
+
+const input1 = document.getElementById("input1");
+input1.value = storeDimension;
+const list = document.querySelector(".list ul");
+const listAll = document.querySelectorAll(".list ul li");
+input1.addEventListener("click", () => {
+  list.classList.toggle("hide");
+});
+
+listAll.forEach((item) => {
+  item.addEventListener("click", () => {
+    input1.value = item.textContent;
+    list.classList.add("hide");
+  });
+});

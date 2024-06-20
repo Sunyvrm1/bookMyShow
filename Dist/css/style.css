@@ -615,7 +615,17 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
-.bookDateLNF select {
+/* .bookDateLNF select {
+  padding: 25px 10px;
+  border-top: 0;
+  border-left: 1px solid var(--offwhite4);
+  border-right: 1px solid var(--offwhite4);
+  border-bottom: 3px solid var(--red);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Dark);
+} */
+#input1{
   padding: 25px 10px;
   border-top: 0;
   border-left: 1px solid var(--offwhite4);
@@ -625,7 +635,36 @@ h3 {
   font-weight: 500;
   color: var(--Dark);
 }
-.bookDateLNF select:focus-visible {
+.list{
+  position: relative;
+}
+.list .dimList{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  gap: 0;
+  box-shadow: 0 2px 4px 0 rgba(39, 41, 43, .15);
+  border: 1px solid rgba(39, 41, 43, .15);
+  border-radius: 0 0 .2857rem .2857rem;
+}
+.list ul li{
+  list-style: none;
+  background-color: var(--white);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--Dark);
+  padding: 10px;
+}
+.hide{
+  display: none !important;
+}
+.list ul li:hover{
+  background-color: var(--offwhite1);
+}
+#input1:focus-visible {
   outline: none;
 }
 .bookPlace {
