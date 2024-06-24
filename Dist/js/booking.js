@@ -20,7 +20,7 @@ fetch("date.json")
                         <p>${item.month}</p>
         </button>
       `;
-      bookDateCont.insertAdjacentHTML("afterbegin", html);
+      bookDateCont.insertAdjacentHTML("beforeend", html);
     });
 
     const bookDate = document.querySelectorAll(".bookDate");
